@@ -11,10 +11,10 @@ class Localize {
       }
     };
 
-    this.dictionaries = __.assign({}, defaults)
-    if (dictionaries && typeof dictionaries === 'object') {
-      __.assign(this.dictionaries, dictionaries);
+    if (typeof dictionaries !== 'object') {
+      dictionaries = {};
     }
+    this.dictionaries = __.defaultsDeep(dictionaries, defaults);
 
     defaultLang = this.sanitizeLanguageCode(defaultLang);
     this.setDefaultLanguage(defaultLang);
@@ -50,10 +50,10 @@ class Localize {
     if (!this.dictionaries[lang]) {
       this.dictionaries[lang] = {};
     }
-    __.assign(this.dictionaries[lang], dictionary);
+    this.dictionaries[lang] = __.merge(this.dictionaries[lang], dictionary);
   }
 
-  tr(key, lang) {
+  tr(key, lang, ...params) {
     lang = this.sanitizeLanguageCode(lang);
     lang = lang || this.defaultLang;
     // If the language isn't availabe revert to the default language
@@ -61,11 +61,17 @@ class Localize {
       lang = this.defaultLang;
     }
     // Supports nested properties
-    const val = __.get(this.dictionaries[lang], key);
-    if (!val) {
+    let retVal = __.get(this.dictionaries[lang], key);
+    if (!retVal) {
       return '';
     }
-    return val;
+
+    // Replace '$1', '$2', ... in translated text with passed parameters
+    __.forEach(params, (val, key) => {
+      retVal = retVal.replace(`\$${key+1}`, val);
+    });
+
+    return retVal;
   }
 }
 
