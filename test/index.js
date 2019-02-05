@@ -4,6 +4,9 @@ const expect = chai.expect;
 describe('localize', () => {
   const Localize = require('..');
   const local = new Localize({
+    en: {
+      ParamTest: '$1 is a $2'
+    },
     'ru': {
       __MissingDefaultLang: 'Выбранный язык по умолчанию недоступен'
     }
@@ -29,6 +32,11 @@ describe('localize', () => {
   it('tr[anslate] (missing key)', () => {
     const tr = local.tr('__MissingKey');
     expect(tr).to.be.equal('');
+  });
+
+  it('tr[anslate] (with parameters)', () => {
+    const tr = local.tr('ParamTest', null, 'Apple', 'Banana');
+    expect(tr).to.be.equal('Apple is a Banana');
   });
 
   it('listLanguages', () => {
