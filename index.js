@@ -63,13 +63,15 @@ class Localize {
     // Supports nested properties
     let retVal = __.get(this.dictionaries[lang], key);
     if (!retVal) {
-      return '';
+      return null;
     }
 
     // Replace '$1', '$2', ... in translated text with passed parameters
-    __.forEach(params, (val, key) => {
-      retVal = retVal.replace(`\$${key+1}`, val);
-    });
+    if (typeof retVal === 'string') {
+      __.forEach(params, (val, key) => {
+        retVal = retVal.replace(`\$${key+1}`, val);
+      });
+    }
 
     return retVal;
   }
