@@ -56,9 +56,9 @@ Returns an Array of the available dictionary languages.
 ## Localize loadDictionary(lang, dictionary)
 Loads and overwrites dictionary entries for the given `lang`. Existing key values are overwritten by values loaded.
 
-## Localize tr(key, lang, ...params) &#x27fe; string
-Returns the translations provided for a given key of the `lang` provided. If no `lang` is provided or is not available, then the default language is used. If the key does not exist in the dictionary, then an empty string is returned. Additional parameters may
-be passed and they are replaced in the translated string in the order they appear where '$1', '$2', etc... appear.
+## Localize tr(key, lang, ...params) &#x27fe; string | object | null
+Returns the translations provided for a given key of the `lang` provided, or a map of the dictionary for the top level key. If no `lang` is provided or is not available, then the default language is used. If the key does not exist in the dictionary, then a `null` value is returned. Additional parameters may
+be passed and they are replaced in the translated string in the order they appear where '$1', '$2', etc... appear in strings.
 
 # [License](#license)
 <a name="license"></a>
