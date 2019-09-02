@@ -1,7 +1,7 @@
 // index.js
 /* eslint no-unused-vars: "off" */
 
-const __ = require('@mediaxpost/lodashext');
+const __ = require('@outofsync/lodash-ex');
 
 class Localize {
   constructor(dictionaries, defaultLang) {

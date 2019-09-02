@@ -1,13 +1,13 @@
 # localize
 
-[![NPM](https://nodei.co/npm/@mediaxpost/localize.png?downloads=true)](https://nodei.co/npm/@mediaxpost/localize/)
+[![NPM](https://nodei.co/npm/@outofsync/localize.png?downloads=true)](https://nodei.co/npm/@outofsync/localize/)
 
-[![Actual version published on npm](http://img.shields.io/npm/v/@mediaxpost/localize.svg)](https://www.npmjs.org/package/@mediaxpost/localize)
-[![Travis build status](https://travis-ci.org/MediaXPost/localize.svg?branch=master)](https://www.npmjs.org/package/@mediaxpost/localize)
-[![Total npm module downloads](http://img.shields.io/npm/dt/@mediaxpost/localize.svg)](https://www.npmjs.org/package/@mediaxpost/localize)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5df4541beccd4014bc2c80e275b0bf21)](https://www.codacy.com/app/chronosis/localize?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MediaXPost/localize&amp;utm_campaign=Badge_Grade)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/5df4541beccd4014bc2c80e275b0bf21)](https://www.codacy.com/app/chronosis/localize?utm_source=github.com&utm_medium=referral&utm_content=MediaXPost/localize&utm_campaign=Badge_Coverage)
-[![Dependencies badge](https://david-dm.org/MediaXPost/localize/status.svg)](https://david-dm.org/MediaXPost/localize?view=list)
+[![Actual version published on npm](http://img.shields.io/npm/v/@outofsync/localize.svg)](https://www.npmjs.org/package/@outofsync/localize)
+[![Travis build status](https://travis-ci.org/OutOfSyncStudios/localize.svg?branch=master)](https://www.npmjs.org/package/@outofsync/localize)
+[![Total npm module downloads](http://img.shields.io/npm/dt/@outofsync/localize.svg)](https://www.npmjs.org/package/@outofsync/localize)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5df4541beccd4014bc2c80e275b0bf21)](https://www.codacy.com/app/chronosis/localize?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=OutOfSyncStudios/localize&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/5df4541beccd4014bc2c80e275b0bf21)](https://www.codacy.com/app/chronosis/localize?utm_source=github.com&utm_medium=referral&utm_content=OutOfSyncStudios/localize&utm_campaign=Badge_Coverage)
+[![Dependencies badge](https://david-dm.org/OutOfSyncStudios/localize/status.svg)](https://david-dm.org/OutOfSyncStudios/localize?view=list)
 
 `localize` is a basic i18n module for Node.JS.
 
@@ -15,14 +15,14 @@
 <a name="installation"></a>
 
 ```shell
-npm install @mediaxpost/localize
+npm install @outofsync/localize
 ```
 
 # [Usage](#usage)
 <a name="usage"></a>
 
 ```js
-const Localize = require('@mediaxpost/localize');
+const Localize = require('@outofsync/localize');
 const i18n = new Localize({
   'en': {
     'TestKey': 'Test'
@@ -57,8 +57,7 @@ Returns an Array of the available dictionary languages.
 Loads and overwrites dictionary entries for the given `lang`. Existing key values are overwritten by values loaded.
 
 ## Localize tr(key, lang, ...params) &#x27fe; string | object | null
-Returns the translations provided for a given key of the `lang` provided, or a map of the dictionary for the top level key. If no `lang` is provided or is not available, then the default language is used. If the key does not exist in the dictionary, then a `null` value is returned. Additional parameters may
-be passed and they are replaced in the translated string in the order they appear where '$1', '$2', etc... appear in strings.
+Returns the translations provided for a given key of the `lang` provided, or a map of the dictionary for the top level key. If no `lang` is provided or is not available, then the default language is used. If the key does not exist in the dictionary, then a `null` value is returned. Additional parameters may be passed and they are replaced in the translated string in the order they appear where '$1', '$2', etc... appear in strings.
 
 # [License](#license)
 <a name="license"></a>
