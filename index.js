@@ -1,15 +1,11 @@
 // index.js
 /* eslint no-unused-vars: "off" */
 
-const __ = require('@mediaxpost/lodashext');
+const __ = require('@outofsync/lodash-ex');
 
 class Localize {
   constructor(dictionaries, defaultLang) {
-    const defaults = {
-      en: {
-        __MissingDefaultLang: 'Selected default language is unavailable.'
-      }
-    };
+    const defaults = { en: { __MissingDefaultLang: 'Selected default language is unavailable.' } };
 
     if (typeof dictionaries !== 'object') {
       dictionaries = {};
@@ -68,8 +64,8 @@ class Localize {
 
     // Replace '$1', '$2', ... in translated text with passed parameters
     if (typeof retVal === 'string') {
-      __.forEach(params, (val, key) => {
-        retVal = retVal.replace(`\$${key+1}`, val);
+      __.forEach(params, (val, idx) => {
+        retVal = retVal.replace(`$${idx + 1}`, val);
       });
     }
 

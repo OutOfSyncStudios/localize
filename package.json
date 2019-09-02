@@ -1,6 +1,6 @@
 {
-  "name": "@mediaxpost/localize",
-  "version": "1.1.1",
+  "name": "@outofsync/localize",
+  "version": "1.1.2",
   "description": "A basic i18n module for Node.js",
   "main": "index.js",
   "directories": {
@@ -16,7 +16,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MediaXPost/localize.git"
+    "url": "git+https://github.com/OutOfSyncStudios/localize.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "i18n",
@@ -27,22 +30,22 @@
   "author": "Jay Reardon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MediaXPost/localize/issues"
+    "url": "https://github.com/OutOfSyncStudios/localize/issues"
   },
-  "homepage": "https://github.com/MediaXPost/localize#readme",
+  "homepage": "https://github.com/OutOfSyncStudios/localize#readme",
   "devDependencies": {
     "chai": "^4.2.0",
     "codacy-coverage": "^3.4.0",
-    "eslint": "^5.12.0",
-    "gulp": "^4.0.0",
-    "gulp-eslint": "^5.0.0",
-    "gulp-mocha": "^6.0.0",
+    "eslint": "^6.3.0",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-mocha": "^7.0.1",
     "gulp-prettier": "^2.0.0",
-    "mocha": "^5.2.0",
-    "nyc": "^13.1.0",
-    "prettier": "^1.15.3"
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "prettier": "^1.18.2"
   },
   "dependencies": {
-    "@mediaxpost/lodashext": "^1.2.1"
+    "@outofsync/lodash-ex": "^1.3.2"
   }
 }
