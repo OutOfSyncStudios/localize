@@ -18,6 +18,9 @@
     "type": "git",
     "url": "git+https://github.com/OutOfSyncStudios/localize.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },  
   "keywords": [
     "i18n",
     "l10n",
