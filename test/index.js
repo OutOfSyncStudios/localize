@@ -11,9 +11,7 @@ describe('localize', () => {
         Key2: 'Key2'
       }
     },
-    'ru': {
-      __MissingDefaultLang: 'Выбранный язык по умолчанию недоступен'
-    }
+    ru: { __MissingDefaultLang: 'Выбранный язык по умолчанию недоступен' }
   });
 
   it('load', () => {
@@ -31,6 +29,11 @@ describe('localize', () => {
   it('tr[anslate] (missing language)', () => {
     const tr = local.tr('__MissingDefaultLang', 'zh');
     expect(tr).to.be.equal('Selected default language is unavailable.');
+  });
+
+  it('tr[anslate] (selected language)', () => {
+    const tr = local.tr('__MissingDefaultLang', 'ru');
+    expect(tr).to.be.equal('Выбранный язык по умолчанию недоступен');
   });
 
   it('tr[anslate] (missing key)', () => {
@@ -63,7 +66,7 @@ describe('localize', () => {
   });
 
   it('setDefaultLanguage (bad)', () => {
-    expect(() => { local.setDefaultLanguage('zh') }).to.throw('Selected default language is unavailable.');
+    expect(() => { local.setDefaultLanguage('zh'); }).to.throw('Selected default language is unavailable.');
   });
 
   it('isLanguageAvailable (good)', () => {
@@ -88,8 +91,8 @@ describe('localize', () => {
 
   it('loadDictionary (existing)', () => {
     local.loadDictionary('en', {
-      'NewKey': 'Test',
-      '__MissingDefaultLang': 'Lame'
+      NewKey: 'Test',
+      __MissingDefaultLang: 'Lame'
     });
     let tr = local.tr('NewKey');
     expect(tr).to.be.equal('Test');
@@ -99,8 +102,8 @@ describe('localize', () => {
 
   it('loadDictionary (new)', () => {
     local.loadDictionary('ja', {
-      'NewKey': 'ありがと',
-      '__MissingDefaultLang': '選択されたデフォルトの言語は利用できません'
+      NewKey: 'ありがと',
+      __MissingDefaultLang: '選択されたデフォルトの言語は利用できません'
     });
     let tr = local.tr('NewKey', 'ja');
     expect(tr).to.be.equal('ありがと');
