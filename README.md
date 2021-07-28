@@ -5,7 +5,7 @@
 [![Actual version published on npm](http://img.shields.io/npm/v/@outofsync/localize.svg)](https://www.npmjs.org/package/@outofsync/localize)
 [![Total npm module downloads](http://img.shields.io/npm/dt/@outofsync/localize.svg)](https://www.npmjs.org/package/@outofsync/localize)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/70cd43a66ab94c5494c98f473a81f960)](https://www.codacy.com/gh/OutOfSyncStudios/localize/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=OutOfSyncStudios/localize&amp;utm_campaign=Badge_Grade)
-[![Codacy Coverage Badge](https://api.codacy.com/project/badge/Coverage/3b5ac916dabe4d89aa08346f70acc301)](https://www.codacy.com/app/OutOfSyncStudios/localize?utm_source=github.com&utm_medium=referral&utm_content=OutOfSyncStudios/localize&utm_campaign=Badge_Coverage)
+[![Codacy Coverage Badge](https://app.codacy.com/project/badge/Coverage/70cd43a66ab94c5494c98f473a81f960)](https://www.codacy.com/gh/OutOfSyncStudios/localize/dashboard?utm_source=github.com&utm_medium=referral&utm_content=OutOfSyncStudios/localize&utm_campaign=Badge_Coverage)
 [![Dependencies badge](https://david-dm.org/OutOfSyncStudios/localize/status.svg)](https://david-dm.org/OutOfSyncStudios/localize?view=list)
 
 `localize` is a basic i18n module for Node.JS.
