@@ -1,7 +1,12 @@
 // index.js
 /* eslint no-unused-vars: "off" */
 
-const __ = require('@outofsync/lodash-ex');
+const __ = {
+  defaultsDeep: require('lodash.defaultsdeep'),
+  forEach: require('lodash.foreach'),
+  get: require('lodash.get'),
+  merge: require('lodash.merge'),
+};
 
 class Localize {
   constructor(dictionaries, defaultLang) {
