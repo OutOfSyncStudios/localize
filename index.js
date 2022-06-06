@@ -5,6 +5,7 @@ const __ = {
   defaultsDeep: require('lodash.defaultsdeep'),
   forEach: require('lodash.foreach'),
   get: require('lodash.get'),
+  isNil: require('lodash.isnil'),
   merge: require('lodash.merge'),
 };
 
@@ -27,7 +28,7 @@ class Localize {
 
   sanitizeLanguageCode(lang) {
     if (typeof lang === 'string') {
-      return lang.substr(0, 2);
+      return lang.substring(0, 2);
     }
     return 'en';
   }
@@ -63,7 +64,7 @@ class Localize {
     }
     // Supports nested properties
     let retVal = __.get(this.dictionaries[lang], key);
-    if (!retVal) {
+    if (__.isNil(retVal)) {
       return null;
     }
 

@@ -62,4 +62,4 @@ Returns the translations provided for a given key of the `lang` provided, or a m
 <a name="license"></a>
 
 Licensed under the MIT license.
-Copyright (c) 2019 Out of Sync Studios LLC
+Copyright (c) 2019-2022 Out of Sync Studios LLC
